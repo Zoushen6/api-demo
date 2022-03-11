@@ -2,9 +2,9 @@ import axios from 'axios';
 import commonjs from './common.js';
 
 const axiosDefault = axios.create({
-    baseURL: '/api',
+    // baseURL: '/api', //默认前缀地址是项目启动的地址
     //上线时会有多个.env文件  不同的VUE_APP_URL对应不同的线上地址
-    // baseURL: process.env.VUE_APP_URL + 'api',
+    baseURL: process.env.VUE_APP_URL + 'api',
     timeout: 300000
 });
 

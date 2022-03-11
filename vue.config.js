@@ -2,6 +2,7 @@
 module.exports = {
     //webpack配置
     devServer: {
+        port: 8083,
         proxy: {
             '/api': {
                 target: 'http://localhost:8088',   //代理地址，这里设置的地址会代替axios中设置的baseURL

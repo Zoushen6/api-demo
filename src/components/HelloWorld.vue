@@ -1,6 +1,7 @@
 <template>
     <div class="axios">
         <button @click="request"> axios</button>
+        <div>{{ name }}</div>
     </div>
 </template>
 
@@ -12,12 +13,14 @@ export default {
     },
     data() {
         return {
+            name:''
         }
     },
     methods: {
         request() {
             this.$http.get("/data").then((res) => {
                 console.log(res);
+                this.name = res.data.name
             })
         }
     }
